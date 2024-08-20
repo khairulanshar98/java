@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DuplicateWords {
+public class JavaDuplicateWord {
 
     public static void main(String[] args) {
 

@@ -1,7 +1,6 @@
 import java.util.*;
-class Solution{
+class JavaStack{
 	private static Map<Character, Character> braketsMap = new HashMap<>();
-       
 	public static void main(String []argh)
 	{
         braketsMap.put('{', '}');

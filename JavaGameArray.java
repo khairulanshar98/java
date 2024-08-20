@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class JavaGameArray {
     private static final Scanner scan = new Scanner(System.in);
     public static boolean canWin(int leap, int[] game, int index) {
         // Return true if you can win the game; otherwise, return false.

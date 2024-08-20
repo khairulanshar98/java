@@ -18,7 +18,7 @@ class MyBook {
 }
 //Write MyBook class here
 
-public class Main{
+public class JavaMyBook{
 	
 	public static void main(String []args){
 		//Book new_novel=new Book(); This line prHMain.java:25: error: Book is abstract; cannot be instantiated

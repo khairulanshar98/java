@@ -4,7 +4,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution {
+public class JavaStaticInitializerBlock {
     static Scanner scanner = new Scanner(System.in);
     static int B = scanner.nextInt();
     static int H = scanner.nextInt();
@@ -20,8 +20,5 @@ public class Solution {
         } catch (Exception e) {
             System.out.println(e);
         }
-
-
     }//end of main
-
 }//end of class

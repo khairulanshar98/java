@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 import java.util.stream.*;
 
-public class Solution {
+public class JavaArraylist {
     private static final Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
