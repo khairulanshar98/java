@@ -1,32 +1,38 @@
-import java.util.*;
-import java.math.BigDecimal;
 
-class Student{
-	private int id;
-	private String fname;
-	private double cgpa;
-	public Student(int id, String fname, double cgpa) {
-		super();
-		this.id = id;
-		this.fname = fname;
-		this.cgpa = cgpa;
-	}
-	public int getId() {
-		return id;
-	}
-	public String getFname() {
-		return fname;
-	}
-	public double getCgpa() {
-		return cgpa;
-	}
+import java.math.BigDecimal;
+import java.util.*;
+
+class Student {
+
+    private int id;
+    private String fname;
+    private double cgpa;
+
+    public Student(int id, String fname, double cgpa) {
+        super();
+        this.id = id;
+        this.fname = fname;
+        this.cgpa = cgpa;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getFname() {
+        return fname;
+    }
+
+    public double getCgpa() {
+        return cgpa;
+    }
 }
 
-class Checker implements Comparator<Student>{
-    
+class Checker implements Comparator<Student> {
+
     @Override
-    public int compare(Student p1, Student p2){
-        if (p1.getCgpa()==p2.getCgpa()) {
+    public int compare(Student p1, Student p2) {
+        if (p1.getCgpa() == p2.getCgpa()) {
             return p1.getFname().compareTo(p2.getFname());
         } else {
             BigDecimal b1 = new BigDecimal(p1.getCgpa());
@@ -37,29 +43,31 @@ class Checker implements Comparator<Student>{
 }
 
 //Complete the code
-public class JavaSort
-{
-	public static void main(String[] args){
-		Scanner in = new Scanner(System.in);
-		int testCases = Integer.parseInt(in.nextLine());
-		
-		List<Student> studentList = new ArrayList<Student>();
-		while(testCases>0){
-			int id = in.nextInt();
-			String fname = in.next();
-			double cgpa = in.nextDouble();
-			
-			Student st = new Student(id, fname, cgpa);
-			studentList.add(st);
-			
-			testCases--;
-		}
-        studentList.sort(new Checker());
-        for(Student st: studentList){
-			System.out.println(st.getFname());
-		}
-	}
+public class JavaSort {
+
+    private final static Scanner in = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        try (in) {
+            int testCases = Integer.parseInt(in.nextLine());
+
+            List<Student> studentList = new ArrayList<Student>();
+            while (testCases > 0) {
+                int id = in.nextInt();
+                String fname = in.next();
+                double cgpa = in.nextDouble();
+
+                Student st = new Student(id, fname, cgpa);
+                studentList.add(st);
+
+                testCases--;
+            }
+            studentList.sort(new Checker());
+            for (Student st : studentList) {
+                System.out.println(st.getFname());
+            }
+        } finally {
+            in.close();
+        }
+    }
 }
-
-
-
