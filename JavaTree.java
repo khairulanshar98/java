@@ -102,8 +102,8 @@ class ProductOfRedNodesVisitor extends TreeVis {
     public int getResult() {
         return (int) result;
     }
-
-    private void calc(Tree tree) {
+    
+    private void calc(Tree tree){
         if (tree.getColor() == Color.RED) {
             result = (result * tree.getValue()) % (1000000007);
         }
@@ -149,7 +149,7 @@ public class JavaTree {
 
     private static final Scanner sc = new Scanner(System.in);
 
-    public static Tree solve() {
+    public static Tree solve() { 
         // read the tree from STDIN and return its root as a return value of this 
         int n = sc.nextInt();
         int[] vals = new int[n];
@@ -173,12 +173,13 @@ public class JavaTree {
             nodeEdges.get(u).add(v);
             nodeEdges.get(v).add(u);
         }
-
+        
         // 1 -> {2,3}
         // 2 -> {1}
         // 3 -> {1,4,5}
         // 4 -> {3}
         // 5 -> {3}
+
         Map<TreeNode, Integer> nodeIndexMap = new HashMap<>();
         List<TreeNode> parents = new ArrayList<>();
         TreeNode root = new TreeNode(vals[0], colors[0], 0);
@@ -190,9 +191,9 @@ public class JavaTree {
             for (TreeNode node : parents) {
                 int parentIndex = nodeIndexMap.get(node);
                 int depth = node.getDepth();
-
+                
                 //System.err.println("parentIndex:"+parentIndex+":"+nodeEdges.get(parentIndex));
-                for (int childIndex : nodeEdges.get(parentIndex)) {
+                for (int childIndex : nodeEdges.get(parentIndex)) {                   
                     //System.err.println(childIndex+":"+nodeEdges.get(childIndex));
                     nodeEdges.get(childIndex).remove(parentIndex);
                     //System.err.println(childIndex+":"+nodeEdges.get(childIndex));

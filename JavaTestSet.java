@@ -1,4 +1,6 @@
 
+import java.util.*;
+
 public class JavaTestSet {
 
     public static boolean isPali(String s) {
@@ -25,29 +27,31 @@ public class JavaTestSet {
     }
 
     public static void main(String[] args) {
-        String s = "sa";
-        if (isPali(s)) {
-            s = "";
-        }
-        int ii = -1;
-        for (int i = 0; i < s.length(); i++) {
-            StringBuilder sb = new StringBuilder(s);
-            sb.deleteCharAt(i);
-            String resultString = sb.toString();
-            if (isPali(resultString)) {
-                System.out.println(resultString);
-                ii = i;
-                break;
-            }
-        }
-        System.out.println(ii);
-        System.out.println(palindromeIndex(s));
+        String s = "";
+        System.out.println("s.length" + s.length());
+        // String s = "sa";
+        // if (isPali(s)) {
+        //     s = "";
+        // }
+        // int ii = -1;
+        // for (int i = 0; i < s.length(); i++) {
+        //     StringBuilder sb = new StringBuilder(s);
+        //     sb.deleteCharAt(i);
+        //     String resultString = sb.toString();
+        //     if (isPali(resultString)) {
+        //         System.out.println(resultString);
+        //         ii = i;
+        //         break;
+        //     }
+        // }
+        // System.out.println(ii);
+        // System.out.println(palindromeIndex(s));
 
-        // Set<Integer> a = new HashSet<Integer>();
-        // // Adding all elements to List 
-        // a.addAll(Arrays.asList(
-        //         new Integer[]{1}));
-        // System.out.println(a);
+        Set<Integer> a = new HashSet<Integer>();
+        // Adding all elements to List 
+        a.addAll(Arrays.asList(
+                new Integer[]{1}));
+        System.out.println(a);
         // System.out.println(a);
         // List<Double> arr1 = IntStream.range(0, 3).mapToObj(i -> Double.parseDouble("" + (i))).collect(toList());
         // System.err.println(arr1);
@@ -57,11 +61,12 @@ public class JavaTestSet {
         // boolean isExists = assss.contains("AM");
         // assss = assss.replace("AM", "");
         // List<List<Integer>> matrix = new ArrayList();
-        // List<Integer> row = new ArrayList();
-        // row.add(112);
-        // row.add(42);
-        // row.add(83);
-        // row.add(119);
+        List<Integer> row = new ArrayList();
+        row.add(112);
+        row.add(42);
+        row.add(83);
+        row.add(119);
+        int iix = (int) row.get(1);
         // matrix.add(row);
         // row = new ArrayList();
         // row.add(56);
